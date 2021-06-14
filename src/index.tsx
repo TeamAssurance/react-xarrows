@@ -87,6 +87,7 @@ const Xarrow: React.FC<xarrowPropsType> = (props: xarrowPropsType) => {
     _cpy1Offset = 0,
     _cpx2Offset = 0,
     _cpy2Offset = 0,
+    updatePositions = {},
     ...extraProps
   } = props;
 
@@ -520,15 +521,28 @@ const Xarrow: React.FC<xarrowPropsType> = (props: xarrowPropsType) => {
     if (path === 'smooth')
       curvesPossibilities = {
         hh: () => {
-          //horizontal - from right to left or the opposite
-          cpx1 += absDx * cu * xSign;
-          cpx2 -= absDx * cu * xSign;
-          // if (absDx < 2 * headOffset) {
-          //   cpx1 += headOffset * xSign - absDx / 2;
-          //   cpx2 -= headOffset * xSign * 2 - absDx;
-          // }
-          // cpx1 += headOffset * 2 * xSign;
-          // cpx2 -= headOffset * 2 * xSign;
+          if (updatePositions.smooth && updatePositions.smooth.hh) {
+            [x1, x2, y1, y2, cpx1, cpx2, cpy1, cpy2] = updatePositions.smooth.hh({
+              x1,
+              x2,
+              y1,
+              y2,
+              cpx1,
+              cpx2,
+              cpy1,
+              cpy2,
+            });
+          } else {
+            //horizontal - from right to left or the opposite
+            cpx1 += absDx * cu * xSign;
+            cpx2 -= absDx * cu * xSign;
+            // if (absDx < 2 * headOffset) {
+            //   cpx1 += headOffset * xSign - absDx / 2;
+            //   cpx2 -= headOffset * xSign * 2 - absDx;
+            // }
+            // cpx1 += headOffset * 2 * xSign;
+            // cpx2 -= headOffset * 2 * xSign;
+          }
         },
         vv: () => {
           //vertical - from top to bottom or opposite

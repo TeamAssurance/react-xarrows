@@ -47,6 +47,27 @@ export type xarrowPropsType = {
   _cpy1Offset?: number;
   _cpx2Offset?: number;
   _cpy2Offset?: number;
+  updatePositions?: updatePositionsType;
+};
+export type curveType = {
+  x1: number;
+  y1: number;
+  x2: number;
+  y2: number;
+  cpx1: number;
+  cpy1: number;
+  cpx2: number;
+  cpy2: number;
+};
+export type updatePositionType = {
+  hh?: (arg1: curveType) => number[];
+  hv?: (arg1: curveType) => number[];
+  vh?: (arg1: curveType) => number[];
+  vv?: (arg1: curveType) => number[];
+};
+export type updatePositionsType = {
+  smooth?: updatePositionType;
+  grid?: updatePositionType;
 };
 
 export type pathType = typeof tPaths[number];
