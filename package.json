@@ -1,6 +1,6 @@
 {
   "name": "ta-react-xarrows",
-  "version": "1.7.0",
+  "version": "1.7.2",
   "author": "Eliav Louski",
   "description": "Draw arrows (or lines) between components in React!",
   "keywords": [
@@ -20,12 +20,12 @@
   "main": "lib/index.js",
   "module": "lib/index.js",
   "types": "lib",
-  "homepage": "https://eliav2.github.io/react-xarrows/",
+  "homepage": "",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Eliav2/react-xarrows"
+    "url": "https://github.com/TeamAssurance/react-xarrows"
   },
-  "bugs": "https://github.com/Eliav2/react-xarrows/issues",
+  "bugs": "https://github.com/TeamAssurance/react-xarrows/issues",
   "dependencies": {
     "@types/prop-types": "^15.7.3",
     "lodash.isequal": "^4.5.0",

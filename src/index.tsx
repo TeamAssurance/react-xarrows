@@ -929,6 +929,7 @@ const Xarrow: React.FC<xarrowPropsType> = (props: xarrowPropsType) => {
                 position: 'absolute',
                 left: st.cx0 + st.labelStartPos.x,
                 top: st.cy0 + st.labelStartPos.y - strokeWidth - 5,
+                zIndex: 1,
               }}>
               {labelStart}
             </div>
@@ -942,6 +943,7 @@ const Xarrow: React.FC<xarrowPropsType> = (props: xarrowPropsType) => {
                 position: 'absolute',
                 left: st.cx0 + st.labelMiddlePos.x,
                 top: st.cy0 + st.labelMiddlePos.y,
+                zIndex: 1,
               }}>
               {labelMiddle}
             </div>
@@ -954,6 +956,7 @@ const Xarrow: React.FC<xarrowPropsType> = (props: xarrowPropsType) => {
                 position: 'absolute',
                 left: st.cx0 + st.labelEndPos.x,
                 top: st.cy0 + st.labelEndPos.y + strokeWidth + 5,
+                zIndex: 1,
               }}>
               {labelEnd}
             </div>
