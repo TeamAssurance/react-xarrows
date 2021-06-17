@@ -1,5 +1,5 @@
 {
-  "name": "react-xarrows",
+  "name": "ta-react-xarrows",
   "version": "1.7.0",
   "author": "Eliav Louski",
   "description": "Draw arrows (or lines) between components in React!",
